@@ -1,0 +1,22 @@
+{
+  "name": "javascript",
+  "authors": [
+    "Vinicius Reis <luiz.vinicius73@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "pure": "~0.6.0"
+  }
+}
