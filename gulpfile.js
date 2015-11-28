@@ -9,6 +9,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 var gulpif = require('gulp-if');
 var minifyCss = require('gulp-minify-css');
+var jshint = require('gulp-jshint');
+var stylish = require('jshint-stylish');
 
 var args = require('yargs')
     .default('production', false)
@@ -26,7 +28,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./assets/css'));
 });
 
-gulp.task('javascript', function () {
+gulp.task('javascript', ['jshint'], function () {
   var isProduction = args.production;
   // set up the browserify instance on a task basis
   var b = browserify({
@@ -53,9 +55,15 @@ gulp.task('webserver', function() {
     }));
 });
 
+gulp.task('jshint', function() {
+  return gulp.src('./source/js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter(stylish));
+});
 
 gulp.task('watch', ['webserver'], function () {
   gulp.watch('./source/**/*.scss', ['sass']);
+  gulp.watch('./source/**/*.js', ['javascript']);
 });
 
 gulp.task('default', ['sass', 'javascript']);
