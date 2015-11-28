@@ -1,3 +1,3 @@
 (function () {
-  console.log('main.js')
+  var lodash = require('lodash');
 })();

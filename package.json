@@ -11,6 +11,8 @@
     "gulp-if": "^2.0.0",
     "gulp-jshint": "^2.0.0",
     "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-notify-linter-reporters": "^1.0.3",
     "gulp-sass": "^2.1.0",
     "gulp-server-livereload": "^1.5.4",
     "gulp-sourcemaps": "^1.6.0",
@@ -18,6 +20,7 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.8.0",
     "jshint-stylish": "^2.1.0",
+    "lodash": "^3.10.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^3.30.0"
